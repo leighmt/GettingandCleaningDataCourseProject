@@ -15,6 +15,9 @@
 ##  5. Creates a second, independent tidy data set with the average of each 
 ##     variable for each activity and each subject
 
+# Include required packages
+require(reshape2)
+
 # Set URL and file locations
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 archive <- "getdata-projectfiles-UCI HAR Dataset.zip"
