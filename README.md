@@ -10,8 +10,21 @@ The Human Activity Recognition Using Smartphones Data Set from the UCI Machine L
 If the data does not exist in this directory the script will attempt to download the data from the Internet.
 
 Execute the script using the following commands:
- > r
- > source("./run_analysis.R")
+```
+$ r
+> source("./run_analysis.R")
+Loading required package: reshape2
+[1] "Reading in datasets and merging training and test data..."
+[1] "  * Merging X datasets as xCombinedDS..."
+[1] "  * Merging subject datasets as subjectCombinedDS..."
+[1] "  * Merging Y datasets as yCombinedDS..."
+[1] "  * Merge all data sets to create a single data set for analysis..."
+[1] "Extracting mean and standard deviation measurements..."
+[1] "Applying descriptive labels to the labels column..."
+[1] "Labelling columns in data set with descriptive variable names..."
+[1] "Calculating averages..."
+[1] "Writing data to UCI HAR Dataset/tidy_dataset.txt"
+```
 
 ### Aim of the script in creating a tidy data set
 
@@ -24,12 +37,10 @@ Execute the script using the following commands:
 ### Actions taken by the script
 
 1. Check to see if data exists if not then download and unzip the archive from the Internet
-1. Merge the training and test data sets to create a single data set
- 1. First rbind the test and train sets for each dataset
- 1. Then cbind the 3 data sets (subject, y, x)
-  1. First column is subject
-  1. Second column is the activity label
-  1. Remaining columns are the results
+1. Merge the training and test data sets to create a single data set by irst rbind the test and train sets for each dataset then cbind the 3 data sets (subject, y, x)
+ 1. First column is subject
+ 1. Second column is the activity label
+ 1. Remaining columns are the results
 1. Create a variable for the clean data set so that we can modify and store it
 1. Extract the measurements on the mean and standard deviation only
 1. Extracts the feature names from ./UCI HAR Dataset/features.txt and creates a list of those values that match the strings "mean()" and "std()" and stores them in a new list meanSDFeatures
