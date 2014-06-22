@@ -11,8 +11,19 @@ If the data does not exist in this directory the script will attempt to download
 
 Execute the script using the following commands:
 ```
- > r
- > source("./run_analysis.R")
+$ r
+> source("./run_analysis.R")
+Loading required package: reshape2
+[1] "Reading in datasets and merging training and test data..."
+[1] "  * Merging X datasets as xCombinedDS..."
+[1] "  * Merging subject datasets as subjectCombinedDS..."
+[1] "  * Merging Y datasets as yCombinedDS..."
+[1] "  * Merge all data sets to create a single data set for analysis..."
+[1] "Extracting mean and standard deviation measurements..."
+[1] "Applying descriptive labels to the labels column..."
+[1] "Labelling columns in data set with descriptive variable names..."
+[1] "Calculating averages..."
+[1] "Writing data to UCI HAR Dataset/tidy_dataset.txt"
 ```
 
 ### Aim of the script in creating a tidy data set
