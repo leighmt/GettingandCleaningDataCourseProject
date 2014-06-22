@@ -43,5 +43,5 @@ The following variables were created as part of the run_analysis.R script:
  * 6 -> LAYING
 1. The first two columns are labelled using static values of "Subject" and "Activity" with the remaining columns labelled by utilising the list created from reading in features.txt.
 1. A series of calls to gsub are made to rename the measurement columns to provide more meaningful descriptions than the shortened names provided in features.txt. These names were derived by reading the descriptions provided in the data set by the text file features_info.txt.
-1. The script then generates the tidy data set by using the melt and dcast functions to generate averages for each measurement.
+1. The script then generates the tidy data set by using the melt and dcast functions to generate averages for each measurement. This final tidy data set contains 180 rows and 68 columns.
 1. Finally, the tidy data set is written to disk in the directory "UCI HAR Dataset" as "tidy_dataset.txt".
